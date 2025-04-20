@@ -28,7 +28,7 @@ body {
 
 
 .satellite-banner {
-  background: url('C:\Users\MReza\Desktop\Website_- Copy\New folder\aboveground-carbon.jpg') no-repeat center center/cover;
+  background: url('https://github.com/Mohammadreza20/Mohammadreza20.github.io/blob/main/background/aboveground-carbon.jpg') no-repeat center center/cover;
   height: 60vh; /* Reduced height slightly */
   width: 100%;
 
@@ -778,7 +778,7 @@ footer {
 
 /* *** Create and style the custom colored bullet point using ::before *** */
 .project-item ul.Projects-list li::before {
-    content: "\2022"; /* Unicode character for a standard bullet (•) */
+    content: "\2022"; /* Unicode character for a standard bullet (Â•) */
     color: #36D1DC; /* *** Change this to your desired bullet color (e.g., "green", "#00FF00") *** */
     font-weight: bold; /* Optional: Make the bullet bold */
     /* Position the custom bullet */
