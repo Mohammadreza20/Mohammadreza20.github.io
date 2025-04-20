@@ -28,7 +28,7 @@ body {
 
 
 .satellite-banner {
-  background: url('https://github.com/Mohammadreza20/Mohammadreza20.github.io/blob/main/background/aboveground-carbon.jpg') no-repeat center center/cover;
+  background: url('background/aboveground-carbon.jpg') no-repeat center center/cover;
   height: 60vh; /* Reduced height slightly */
   width: 100%;
 
