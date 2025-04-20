@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Mohammad Reza Mohammadi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="cv.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure footer stays at bottom */
+        }
+
+        .container {
+            max-width: none; /* Max width for content */
+	    width: 90%
+            margin: 0.5rem auto; /* Center content */
+            padding: 1.5rem;
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            flex-grow: 1; /* Allow container to grow */
+        }
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for internal links */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  color: #444; /* Default text color */
+}
+
+.satellite-banner {
+  background: url('C:\Users\MReza\Desktop\aboveground-carbon.jpg') no-repeat center center/cover;
+  height: 60vh; /* Reduced height slightly */
+  width: 100%;
+}
+
+
+.top-banner {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* To contain the image if necessary */
+}
+.main-container {
+  position: relative;
+  padding: 0 1rem; /* Add some horizontal padding */
+  margin-top: -10vh; /* Adjusted overlap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem; /* Add padding at the bottom */
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.35); /* Slightly more opaque */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  max-width: 700px;
+  width: 90%;
+  /* Removed fixed margin-top, position adjusted by main-container */
+  text-align: center;
+  z-index: 2; /* Ensure it's above banner */
+  position: relative; /* Needed for z-index */
+}
+
+.glass-card h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #4e76cf, #30abb4); /* Adjusted gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.glass-card p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.icon-section {
+  display: flex;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2); /* Softer shadow */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap */
+  background: linear-gradient(to right, #e8f5e9, #e0f7fa); /* Slightly adjusted gradient */
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  width: 75%;
+  max-width: 960px;
+  z-index: 1;
+}
+
+/* Style for the links wrapping the icon cards */
+.icon-link {
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+}
+
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 110px;
+  padding: 1.1rem; /* Slightly more padding */
+  background: rgba(255,255,255,0.5); /* Slightly more opaque */
+  border-radius: 1rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition */
+}
+
+.icon-card i {
+  font-size: 1.8rem; /* Slightly larger icon */
+  color: #333;
+  margin-bottom: 0.5rem; /* Increased space */
+  transition: background 0.3s ease; /* Smooth transition for gradient */
+}
+
+.icon-card span {
+  font-size: 0.9rem;
+  font-weight: 500; /* Slightly bolder text */
+  color: #333;
+   transition: background 0.3s ease; /* Smooth transition for gradient */
+}
+
+/* Hover effect for the link/card */
+.icon-link:hover .icon-card {
+   transform: translateY(-5px); /* Lift effect */
+   box-shadow: 0 12px 20px rgba(31, 38, 135, 0.2);
+}
+
+.icon-link:hover .icon-card i,
+.icon-link:hover .icon-card span {
+  background: linear-gradient(to right, #5B86E5, #36D1DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  }
+  .icon-section {
+      gap: 1rem;
+  }
+  .icon-card {
+      width: 100px;
+      padding: 0.6rem;
+  }
+   .icon-card i {
+     font-size: 1.5rem;
+   }
+   .icon-card span {
+     font-size: 0.8rem;
+   }
+  
+  
+}
+
+@media (max-width: 480px) {
+
+  }
+  .icon-card {
+      width: 85px;
+      padding: 0.5rem;
+  }
+   .icon-card i {
+     font-size: 1.3rem;
+   }
+   .icon-card span {
+     font-size: 0.75rem;
+   }
+   .content-section {
+  
+}
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #444;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .pdf-viewer {
+            width: 100%;
+            height: 500px; /* Adjust height as needed */
+            border: 1px solid #ccc;
+            margin-bottom: 1.5rem; /* Space below the viewer */
+        }
+
+        .download-link, .back-link {
+            display: block; /* Make links block level */
+            text-align: center;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(to right, #5B86E5, #36D1DC);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background 0.3s ease, box-shadow 0.2s ease;
+            max-width: 250px; /* Limit width */
+            margin-left: auto; /* Center the button */
+            margin-right: auto; /* Center the button */
+        }
+
+        .download-link:hover, .back-link:hover {
+            background: linear-gradient(to right, #4a75d1, #29a9b4);
+             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .fallback-text {
+             text-align: center;
+             margin-bottom: 1rem;
+             color: #555;
+        }
+
+         footer {
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem; /* Space above footer */
+            color: #777;
+            font-size: 0.9em;
+        }
+
+         /* Responsive adjustments */
+        @media (max-width: 768px) {
+             .container {
+                 margin: 1rem;
+                 padding: 1rem;
+             }
+            h1 {
+                 font-size: 1.6rem;
+            }
+            .pdf-viewer {
+                height: 800px;
+            }
+             .download-link, .back-link {
+                 max-width: 200px;
+                 padding: 0.7rem 1.2rem;
+             }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <div class="icon-section">
+    <a href="about.html" class="icon-link">
+        <div class="icon-card"><i class="fas fa-user"></i><span>About Me</span></div>
+    </a>
+      <a href="CV.html" class="icon-link">
+        <div class="icon-card"><i class="fas fa-file-alt"></i><span>CV</span></div>
+      </a>
+    <a href="research.html" class="icon-link">
+        <div class="icon-card"><i class="fas fa-flask"></i><span>Research</span></div>
+    </a>
+    <a href="gallery.html" class="icon-link">
+        <div class="icon-card"><i class="fas fa-image"></i><span>Project Gallery</span></div>
+    </a>
+    <a href="https://github.com/yourusername" target="_blank" class="icon-link">
+        <div class="icon-card"><i class="fab fa-github"></i><span>Code</span></div>
+    </a>
+    <a href="contact.html" class="icon-link">
+        <div class="icon-card"><i class="fas fa-envelope"></i><span>Contact</span></div>
+    </a>
+    </div>
+        <h1>Curriculum Vitae</h1>
+
+        <p class="fallback-text">
+            You can view my CV below or download the PDF directly.
+        </p>
+
+        <iframe src="C:\Users\MReza\Desktop\CV_Mohammad Reza Mohammadi.pdf" class="pdf-viewer" title="Mohammad Reza Mohammadi CV PDF Viewer">
+            <p>Your browser does not support viewing PDFs directly in the page. Please use the download link below.</p>
+        </iframe>
+
+        <a href="Mohammad_Reza_Mohammadi_CV.pdf" download="Mohammad_Reza_Mohammadi_CV.pdf" class="download-link">
+            Download CV (PDF)
+        </a>
+
+
+    </div>
+
+    <footer>
+        &copy; <script>document.write(new Date().getFullYear())</script> Mohammad Reza Mohammadi
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+/* contact.css */
+
+.contact-info {
+    text-align: center; /* Center the contact information */
+}
+
+.contact-info h2 {
+    margin-bottom: 2rem;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto; /* Center the list */
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-list li i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #36D1DC; /* Use your theme color */
+    width: 25px; /* Ensure consistent icon width */
+    text-align: center;
+}
+
+.contact-list li span {
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: #333;
+}
+
+.contact-list li a {
+    color: #4e76cf; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list li a:hover {
+    color: #30abb4; /* Hover link color */
+}
+
+.icon-section-contact {
+  display: flex;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2); /* Softer shadow */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap */
+  background: linear-gradient(to right, #e8f5e9, #e0f7fa); /* Slightly adjusted gradient */
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 960px;
+  z-index: 1;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  
+  .icon-section-contact {
+      gap: 1rem;
+  }
+
+  
+}
+
+
+
+.glass-card-contact {
+  background: rgba(255, 255, 255, 0.35); /* Slightly more opaque */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  max-width: 700px;
+  width: 90%;
+  margin: 3rem auto;
+  /* Removed fixed margin-top, position adjusted by main-container */
+  text-align: center;
+  z-index: 2; /* Ensure it's above banner */
+  position: relative; /* Needed for z-index */
+}
+
+.glass-card-contact h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #4e76cf, #30abb4); /* Adjusted gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.glass-card-contact p {
+    font-size: 1.1rem;
+    color: #333;
+}

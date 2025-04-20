@@ -1,0 +1,840 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for internal links */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #2e538b1f;/*linear-gradient(to left, #283593, #1976d2);*/
+  margin: 0;
+  color: #444; /* Default text color */
+  
+}
+
+
+
+.container { /* The element where you want the background */
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  /* Other styles for your container */
+}
+
+
+
+
+.satellite-banner {
+  background: url('C:\Users\MReza\Desktop\Website_- Copy\New folder\aboveground-carbon.jpg') no-repeat center center/cover;
+  height: 60vh; /* Reduced height slightly */
+  width: 100%;
+
+}
+
+
+
+.top-banner {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* To contain the image if necessary */
+border-radius: 5px;
+}
+
+
+
+
+
+
+.main-container {
+  position: relative;
+  padding: 0 1rem; /* Add some horizontal padding */
+  margin-top: -10vh; /* Adjusted overlap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem; /* Add padding at the bottom */
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.35); /* Slightly more opaque */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  max-width: 700px;
+  width: 90%;
+  /* Removed fixed margin-top, position adjusted by main-container */
+  text-align: center;
+  z-index: 2; /* Ensure it's above banner */
+  position: relative; /* Needed for z-index */
+}
+
+.glass-card h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #4e76cf, #30abb4); /* Adjusted gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.glass-card p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.icon-section {
+  display: flex;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27); /* Softer shadow */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap */
+  background: linear-gradient(to right, #e8f5e9, #e0f7fa); /* Slightly adjusted gradient */
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 960px;
+  z-index: 1;
+}
+
+/* Style for the links wrapping the icon cards */
+.icon-link {
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+}
+
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 92px;
+  padding: 0.9rem ; /* Slightly more padding */
+  background: rgba(255,255,255,0.35); /* Slightly more opaque */
+  border-radius: 1rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition */
+}
+
+.icon-card i {
+  font-size: 1.25rem; /* Slightly larger icon */
+  color: #333;
+  margin-bottom: 0.5rem; /* Increased space */
+  transition: background 0.3s ease; /* Smooth transition for gradient */
+}
+
+.icon-card span {
+  font-size: 0.9rem;
+  font-weight: 500; /* Slightly bolder text */
+  color: #333;
+   transition: background 0.3s ease; /* Smooth transition for gradient */
+}
+
+/* Hover effect for the link/card */
+.icon-link:hover .icon-card {
+   transform: translateY(-5px); /* Lift effect */
+   box-shadow: 0 12px 20px rgba(31, 38, 135, 0.2);
+}
+
+.icon-link:hover .icon-card i,
+.icon-link:hover .icon-card span {
+  background: linear-gradient(to right, #5B86E5, #36D1DC);
+   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Common styles for content sections */
+.content-section {
+  background: rgba(255, 255, 255, 0.7); /* White background with some transparency */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 850px; /* Slightly wider */
+  width: 90%;
+  margin: 2rem auto; /* Center section */
+  text-align: left; /* Default to left align for sections */
+}
+
+.content-section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center; /* Center section titles */
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* Bio Section Specific Styles */
+.bio-section {
+  /* Inherits from .content-section */
+}
+
+.bio-section p {
+  font-size: 1rem;
+  line-height: 1.7; /* Improved readability */
+  color: #444;
+  text-align: justify; /* Justify text */
+  margin-bottom: 1rem; /* Space between paragraphs */
+}
+
+
+.profile-pic {
+  display: block; /* Center the image */
+  max-width: 150px; /* Control image size */
+  height: auto;
+  border-radius: 5%; /* Circular image */
+  margin: 0 auto 1.5rem auto; /* Center below heading */
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Research Section Specific Styles */
+.research-section {
+   /* Inherits from .content-section */
+}
+
+.research-section ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+}
+
+
+
+.research-section li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  padding-left: 1.5em; /* Indentation */
+  position: relative;
+  margin-bottom: 0.8rem; /* Space between items */
+}
+
+
+
+/* Custom bullet point */
+.research-section li::before {
+    content: '\2022'; /* Unicode for a bullet point */
+    color: #36D1DC; /* Use your theme color */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em; /* Adjust width for alignment */
+    margin-left: 0.5em; /* Align bullet with the start */
+    position: absolute;
+    left: 0;
+  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .glass-card h1 {
+    font-size: 2rem;
+  }
+  .icon-section {
+      gap: 1rem;
+  }
+  .icon-card {
+      width: 100px;
+      padding: 0.6rem;
+  }
+   .icon-card i {
+     font-size: 1.5rem;
+   }
+   .icon-card span {
+     font-size: 0.8rem;
+   }
+  .content-section h2 {
+      font-size: 1.5rem;
+  }
+  .bio-section p, .research-section li {
+      font-size: 0.95rem;
+  }
+  .profile-pic {
+      max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .satellite-banner {
+      height: 40vh;
+  }
+  .main-container {
+      margin-top: -8vh;
+  }
+   .glass-card {
+       padding: 1.5rem;
+   }
+  .glass-card h1 {
+    font-size: 1.8rem;
+  }
+  .icon-card {
+      width: 85px;
+      padding: 0.5rem;
+  }
+   .icon-card i {
+     font-size: 1.3rem;
+   }
+   .icon-card span {
+     font-size: 0.75rem;
+   }
+   .content-section {
+       padding: 1.5rem;
+   }
+   .content-section h2 {
+       font-size: 1.3rem;
+   }
+    .bio-section p, .research-section li {
+      font-size: 0.9rem;
+  }
+  .profile-pic {
+      max-width: 100px;
+  }
+}
+
+----------------------------contact--------------------------------------
+
+/* contact.css */
+
+.contact-info {
+    text-align: center; /* Center the contact information */
+}
+
+.contact-info h2 {
+    margin-bottom: 2rem;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto; /* Center the list */
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-list li i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #36D1DC; /* Use your theme color */
+    width: 25px; /* Ensure consistent icon width */
+    text-align: center;
+}
+
+.contact-list li span {
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: #333;
+}
+
+.contact-list li a {
+    color: #4e76cf; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list li a:hover {
+    color: #30abb4; /* Hover link color */
+}
+
+.icon-section-contact {
+  display: flex;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2); /* Softer shadow */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap */
+  background: linear-gradient(to right, #e8f5e9, #e0f7fa); /* Slightly adjusted gradient */
+  padding: 0.9rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  width: 75%;
+  max-width: 960px;
+  z-index: 1;
+  position: relative; /* Needed for z-index */
+  top: 220px;
+
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  
+  .icon-section-contact {
+      gap: 1rem;
+  }
+
+  
+}
+
+
+
+.glass-card-contact {
+  background: rgba(255, 255, 255, 0.35); /* Slightly more opaque */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  max-width: 700px;
+  width: 90%;
+  margin: 3rem auto;
+  /* Removed fixed margin-top, position adjusted by main-container */
+  text-align: center;
+  z-index: 2; /* Ensure it's above banner */
+  position: relative; /* Needed for z-index */
+  bottom: 120px;
+}
+
+.glass-card-contact h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #4e76cf, #30abb4); /* Adjusted gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.glass-card-contact p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+
+
+--------------------------------end contact--------------------------------------
+--------------------------------Gallery--------------------------------------------
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: none/*#f4f4f4;*/
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header, footer {
+  background: linear-gradient(to right, #d8f3dcff, #36D1DC);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+header p a, footer p a {
+    color: #e0f7fa;
+    text-decoration: none;
+    font-size: 1rem;
+}
+header p a:hover, footer p a:hover {
+    text-decoration: underline;
+}
+
+
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto; /* Center the container */
+}
+
+
+.gallery-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 0px;
+}
+
+
+.gallery-item video {
+  max-height: 400px;
+}
+
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px; /* Set consistent height */
+  object-fit: cover; /* Crops edges slightly to fill the box */
+  object-position: center; /* Centers the image in the box */
+  display: block;
+  border-radius: 10px 10px 0 0; /* Optional: rounded top corners */
+}
+
+.gallery-item h3 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.gallery-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  padding: 0 1rem; /* Padding for the description */
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .gallery-container {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    .gallery-item h3 {
+        font-size: 1.2rem;
+    }
+    .gallery-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+     header h1 {
+        font-size: 1.5rem;
+    }
+    .gallery-container {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+        padding: 1rem;
+        gap: 1rem;
+    }
+     .gallery-item img {
+        height: 180px;
+    }
+}
+
+
+.icon-section-gallery {
+  display: flex;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.55); /* Softer shadow */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap */
+ /* Slightly adjusted gradient */
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  width: 85%;
+  max-width: 960px;
+  z-index: 1;
+}
+
+--------------------------------end Gallery--------------------------------------
+--------------------------------research---------------------------------
+/* research.css */
+
+
+
+.publication-list ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+}
+
+
+
+.publication-list li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  padding-left: 1.0em; /* Indentation */
+  position: relative;
+  margin-bottom: 0.8rem; /* Space between items */
+}
+
+
+
+/* Custom bullet point */
+.publication-list li::before {
+    content: '\2022'; /* Unicode for a bullet point */
+    color: #36D1DC; /* Use your theme color */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em; /* Adjust width for alignment */
+    margin-left: 0.5em; /* Align bullet with the start */
+    position: absolute;
+    left: 0;
+  
+}
+
+
+.research-publications .publication-list li .author {
+  font-weight: bold;
+}
+
+.research-publications .publication-list li .year {
+  font-style: italic;
+  color: #777;
+  margin-left: 0.5em;
+}
+
+.research-publications .publication-list li .title {
+  font-weight: normal;
+}
+
+.research-publications .publication-list li .journal,
+.research-publications .publication-list li .conference,
+.research-publications .publication-list li .report {
+  font-style: italic;
+  margin-left: 0.5em;
+}
+
+
+.publication-list {
+  list-style-type: none; /* Removes the default markers (bullets, numbers, etc.) */
+  padding: 0; /* Optional: remove default left padding which often makes space for the marker */
+  margin: 0; /* Optional: remove default margin */
+}
+
+.publication-list li {
+  /* Your other styles for list items */
+}
+
+
+.research-publications {
+  background: rgba(255, 255, 255, 0.85); /* Slightly more opaque */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  width: 90%;
+  text-align: center;
+  z-index: 1; /* Ensure it's above banner */
+  position: relative; /* Needed for z-index */
+  bottom: -140px;
+
+}
+
+.research-publications h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center; /* Center section titles */
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+
+
+
+.glass-card-research {
+  background: rgba(255, 255, 255, 0.35); /* Slightly more opaque */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+  z-index: 2; /* Ensure it's above banner */
+  position: relative; /* Needed for z-index */
+  bottom: -120px;
+}
+
+.glass-card-research h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, grey, white); /* Adjusted gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.icon-section-research {
+  display: flex;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2); /* Softer shadow */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap */
+  background: /*linear-gradient(to right, #e8f5e9, #e0f7fa);*/ /* Slightly adjusted gradient */
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 960px;
+  z-index: 1;
+  position: relative; /* Add this line */
+  bottom: -130px;
+}
+
+
+
+
+
+/* Your existing .project-item styles for the glass card effect */
+.project-item {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  width: 90%;
+  /* Keep text-align: left; as requested */
+  text-align: left;
+  z-index: 1; /* Ensure it's above banner */
+  position: relative; /* Might be needed for other internal positioning, not strictly for bullet */
+  bottom: -200px; /* Adjust as needed */
+  margin-top: 0; /* Adjust as needed */
+  margin-bottom: 255px; /* Adjust as needed */
+  /* No list-style properties needed directly on the div */
+}
+
+/* Clean up duplicate h3 rule - use the more specific/later one */
+/* .project-item h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  color: #333;
+} */
+
+.project-item h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center; /* Center section titles */
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+
+/* Your existing style for the ul */
+.project-item ul.Projects-list {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* Remove default padding-left here, as we'll add it to the li */
+  padding-left: 0; /* Remove default list indentation */
+  list-style: none; /* Ensure no default ul bullet */
+}
+
+/* *** Styles for the list item (li) containing the project details *** */
+.project-item ul.Projects-list li {
+  /* Hide the default bullet */
+  list-style: none;
+  /* Needed for positioning the ::before pseudo-element */
+  position: relative;
+  /* Add padding-left to create space *inside* the list item for the custom bullet */
+  padding-left: 20px; /* Adjust this value based on the size and position of your custom bullet */
+  /* Keep existing margin-bottom */
+  margin-bottom: 5px;
+  /* Ensure text aligns left within the li */
+  text-align: left;
+}
+
+/* *** Create and style the custom colored bullet point using ::before *** */
+.project-item ul.Projects-list li::before {
+    content: "\2022"; /* Unicode character for a standard bullet (•) */
+    color: #36D1DC; /* *** Change this to your desired bullet color (e.g., "green", "#00FF00") *** */
+    font-weight: bold; /* Optional: Make the bullet bold */
+    /* Position the custom bullet */
+    position: absolute;
+    /* Position it to the left of the li's content, within its padding */
+    left: 0; /* Position at the start of the li's padding-left */
+    /* Vertically align the bullet (adjust top or use transform) */
+    top: 0; /* Align with the top of the li's content box */
+    /* Alternative vertical alignment: */
+    /* top: 50%; */
+    /* transform: translateY(-50%); /* May need line-height adjustment */
+    line-height: inherit; /* Inherit line height for better vertical alignment */
+}
+
+
+/* Style for the project title specifically */
+.project-item ul.Projects-list li .project-title {
+    font-weight: bold;
+    /* Add the blue color back as requested */
+    /*color: blue;*/
+    /* Ensure title starts after the padding for the bullet - managed by li padding-left */
+    display: inline; /* Title is inline content */
+}
+
+/* Your existing styles for paragraphs and strong tags */
+.project-item p {
+  margin-bottom: 8px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.project-item p:last-child {
+  margin-bottom: 0;
+}
+
+.project-item strong {
+  color: #555;
+}
+
+/* Your existing style for li within ul (already incorporated above) */
+/* .project-item ul li {
+  margin-bottom: 5px;
+} */
+
+/* Your existing style for h4 (if used elsewhere in project details) */
+.project-item h4 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+--------------------------------end research---------------------------------
+
+
+
+
+
+
+
